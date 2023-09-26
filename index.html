@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>SHILPI.</h1>
+                <p>Data Analytics <br>Enthusiast</p>
+                <h3>Hey there, I'm <span>Shilpi</span> Karmakar, <br>a data analytics enthusiast.
+                    <br>
+                    Easily adjustable and a good <br>going team partner. 
+                    <br>
+                    Dedicated towards my work and <br>contribute in work
+                    deligently. 
+                    <br>
+                    Capable of solving crucial <br>problems along with <br>critical thinking.
+                    <br>
+                    Enthusiastic about data and <br>
+                    passionate towards working <br>with it. 
+                </h3>
+            </div>
+        </div>
+    </div>
+    
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <h1 class="sub-title">About Me</h1>
+                    <p class="about-desc">A hard-working and driven individual constantly working towards enhancing skills. A dedicated data analyst enthusiast with a profound passion for transforming raw data into actionable insights. A commitment to making data-driven decisions that drive positive change
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="experience">
+                        <ul>
+                            <li>
+                                <span>Technical Trainee</span><br>Internship with TEKsystems Global Services
+                            </li>
+                            <li>
+                                <span>Content Writer Intern</span><br>
+                                Failure to Success
+                            </li>
+                            <li>
+                                <span>Chief Advisory Board Member</span><br>The Debating Society of DITU
+                            </li>
+                            <li>
+                                <span>Public Relations Head</span><br>The Debating Society of DITU
+                            </li>
+                            <li><span>Documentation Head</span><br>The Debating Society of DITU</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li>
+                                <span>2019-2023</span><br>B.Tech CSE(DIT University)
+                            </li>
+                            <li>
+                                <span>2018-2019</span><br>
+                                ISC Board(City Montessori School)
+                            </li>
+                            <li>
+                                <span>2016-2017</span><br>
+                                ICSE Board(City Montessori School)
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="Shilpi_Resume.pdf" class="resume" download>Download Resume</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/shilpi-karmakar-34b6bb1b1/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/shilpikarmakar"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>Copyright &copy; Shilpi.</p>
+    </div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+    var sideme = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sideme.style.right = "0";
+    }
+    function closemenu(){
+        sideme.style.right = "-200px";
+    }
+</script>
+</body>
+</html>
